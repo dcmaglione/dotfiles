@@ -6,7 +6,7 @@ function run {
   fi
 }
 
-run picom -b -f 
+run picom -b
 run nitrogen --restore
 run flameshot
 run thunar --daemon

@@ -1,0 +1,40 @@
+[global]
+    font = "FiraCode 12"
+    allow_markup = yes
+    format = "<b>%s</b>\n%b"
+    sort = yes
+    indicate_hidden = yes
+    alignment = center
+    bounce_freq = 0
+    show_age_threshold = 60
+    word_wrap = yes
+    ignore_newline = no
+    geometry = "300x5-6+30"
+    transparency = 0
+    idle_threshold = 120
+    monitor = 0
+    follow = mouse
+    sticky_history = yes
+    line_height = 0
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    separator_color = "#4c566a"
+    startup_notification = false
+    timeout = 5
+
+[frame]
+    width = 4
+    color = "#b1d5fe"
+
+[urgency_low]
+    background = "#2e3440"
+    foreground = "#f2f2f2"
+
+[urgency_normal]
+    background = "#2e3440"
+    foreground = "#f2f2f2"
+
+[urgency_critical]
+    background = "#2e3440"
+    foreground = "#f2f2f2"

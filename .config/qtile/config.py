@@ -164,20 +164,21 @@ keys = [
 
     # Screenshot Tool
     Key(
-        [], "Print",
+        [mod, "shift"], "p",
         lazy.spawn("flameshot gui"),
         desc='Open flameshot gui interface'
     ),
-    Key(
-        ["shift"], "Print",
-        lazy.spawn("flameshot screen"),
-        desc='Capture partial screenshot'
-    ),
-    Key(
-        [mod, "shift"], "Print",
-        lazy.spawn("flameshot full"),
-        desc='Capture full screenshot'
-    ),
+    # Not in use since flameshot gui is versatile
+    # Key(
+    #     ["shift"], "Print",
+    #     lazy.spawn("flameshot screen"),
+    #     desc='Capture partial screenshot'
+    # ),
+    # Key(
+    #     [mod, "shift"], "Print",
+    #     lazy.spawn("flameshot full"),
+    #     desc='Capture full screenshot'
+    # ),
 
     # Media controls
     Key(

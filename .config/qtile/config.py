@@ -416,7 +416,7 @@ def init_widgets_list():
         ),
         widget.TextBox(
             text=" 🌡",
-            padding=2,
+            padding=0,
             background=colors[15],
             foreground=colors[0],
         ),

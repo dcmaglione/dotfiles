@@ -4,7 +4,6 @@
 [[ $- != *i* ]] && return
 source ~/.dotbare/dotbare.plugin.bash
 
-
 ### PROMPT ###
 # PS1='[\u@\h \W]\$ '
 PS1='\e[1;37m\u\e[0m@\h \e[1;37m\w\e[0m \n> \$ '
@@ -22,8 +21,6 @@ alias l="exa -l"
 alias la="exa -a"
 alias lla="exa -la"
 alias lt="exa --tree"
-alias off="clear && xset dpms force off"
-alias ds4bat="cat '/sys/class/power_supply/sony_controller_battery_1c:a0:b8:46:0c:22/capacity'"
 
 ### PATHS ###
 # example

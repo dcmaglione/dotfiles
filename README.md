@@ -2,7 +2,7 @@
 This repository is a collection of my dotfiles. The dotfiles are for various Linux distributions and environments. They are stored here for others to copy and critique if they wish. 
 
 ## Description
-Dotfiles are the customization files used to personalize your Linux or other Unix-based systems. These are simply the files whose names start with a dot (.) like .vimrc, .bashrc, .ssh, etc. And any file that begins with a dot is treated as hidden in all Unix-like operating systems. Therefore, having lots of dotfiles even in your home directory does not make it looks clumsy. 
+Dotfiles are the customization files used to personalize your Linux or other Unix-based systems. These are simply the files whose names start with a dot (.) like .vimrc, .bashrc, .ssh, etc. And any file that begins with a dot is treated as hidden in all Unix-like operating systems. Therefore, having lots of dotfiles even in your home directory does not make it looks cluttered. 
 
 Dotfiles are primarily used for software configuration. Therefore, they are also known as configuration files. Different tools that you use daily, such as your Shell, can be configured easily using dotfiles. They can also be used to automate a series of package installations. 
 

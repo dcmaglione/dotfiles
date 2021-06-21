@@ -1,0 +1,40 @@
+### EXPORTS ###
+export ZSH="/home/dcmag/.oh-my-zsh"
+export VISUAL=vim
+export EDITOR=vim
+
+### THEME ###
+ZSH_THEME="bureau"
+
+### PLUGINS ###
+plugins=(
+  git
+  urltools
+  bgnotify
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  dotbare
+)
+
+source $ZSH/oh-my-zsh.sh
+source /usr/share/fzf/key-bindings.zsh
+
+### ALIASES ###
+alias sync="sudo emerge --sync"
+alias update="sudo emerge -aUDu --quiet-build=y @world && flatpak --user update"
+alias install="sudo emerge --ask --autounmask --autounmask-write --autounmask-continue --quiet-build=y"
+alias remove="sudo emerge --deselect"
+alias clean="sudo emerge --depclean && echo "" && sudo eclean-dist -d"
+alias search="emerge -s"
+alias rebuild="sudo emerge --exclude=sys-kernel/gentoo-kernel --quiet-build=y @module-rebuild && sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias shutdown="sudo shutdown now"
+alias poweroff="sudo poweroff"
+alias reboot="sudo reboot"
+alias ls="lsd"
+alias l="lsd -l"
+alias la="lsd -a"
+alias lla="lsd -la"
+alias lt="lsd --tree"
+
+### PATHS ###
+path+=/home/dcmag/.deno/bin

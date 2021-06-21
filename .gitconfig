@@ -1,0 +1,7 @@
+[user]
+	name = Dominic Maglione
+	email = dcmaglione@gmail.com
+[color]
+	ui = true
+[init]
+	defaultbranch = master

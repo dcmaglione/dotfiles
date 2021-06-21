@@ -1,0 +1,219 @@
+{
+	"name": "shell-format",
+	"displayName": "shell-format",
+	"description": "shellscript、Dockerfile、properties、gitignore、dotenv、hosts、jvmoptions... DocumentFormat",
+	"version": "7.1.0",
+	"publisher": "foxundermoon",
+	"engines": {
+		"vscode": "^1.30.0"
+	},
+	"categories": [
+		"Formatters"
+	],
+	"activationEvents": [
+		"onLanguage:shellscript",
+		"onLanguage:dotenv",
+		"onLanguage:dockerfile",
+		"onLanguage:ignore",
+		"onLanguage:hosts",
+		"onLanguage:jvmoptions",
+		"onLanguage:properties",
+		"onLanguage:spring-boot-properties",
+		"onLanguage:azcli"
+	],
+	"main": "./dist/extension",
+	"capabilities": {
+		"documentFormattingProvider": "true"
+	},
+	"icon": "logo.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/foxundermoon/vs-shell-format.git"
+	},
+	"bugs": {
+		"url": "https://github.com/foxundermoon/vs-shell-format/issues"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"./**/*.{js,jsx,ts,tsx,json,css,scss,md,yml,yaml,html}": [
+			"prettier --write",
+			"git add"
+		]
+	},
+	"keywords": [
+		"shell",
+		"docker",
+		"shellscript",
+		"format",
+		"bash",
+		"dockerfile",
+		"properties",
+		"formatter",
+		"beautify",
+		"dotenv",
+		"hosts",
+		"jvmoptions",
+		"vmoptions",
+		"bashrc",
+		"zshrc",
+		"azcli",
+		"azure cli tool"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "shellscript"
+			},
+			{
+				"id": "dockerfile",
+				"aliases": [
+					"docker",
+					"Dockerfile"
+				],
+				"filenamePatterns": [
+					"Dockerfile",
+					"Dockerfile.*",
+					"*.dockerfile"
+				]
+			},
+			{
+				"id": "ignore",
+				"aliases": [
+					"gitignore",
+					"dockerignore"
+				],
+				"filenames": [
+					".dockerignore",
+					".gitignore"
+				]
+			},
+			{
+				"id": "dotenv",
+				"aliases": [
+					"env"
+				],
+				"filenamePatterns": [
+					".env.*"
+				],
+				"filenames": [
+					"env",
+					".env"
+				]
+			},
+			{
+				"id": "jvmoptions",
+				"aliases": [
+					"vmoptions"
+				],
+				"extensions": [
+					".vmoptions"
+				],
+				"filenames": [
+					"jvm.options"
+				]
+			},
+			{
+				"id": "hosts",
+				"filenames": [
+					"hosts"
+				]
+			},
+			{
+				"id": "properties",
+				"aliases": [
+					"Properties",
+					"spring-boot-properties"
+				],
+				"extensions": [
+					".properties"
+				]
+			},
+			{
+				"id": "azcli",
+				"extensions": [
+					".azcli"
+				]
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "shell-format configuration",
+			"properties": {
+				"shellformat.path": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "the shfmt fullpath  example[ mac,linux ] /usr/local/bin/shfmt  [windows] C:/bin/shfmt.exe   download fron https://github.com/mvdan/sh/releases"
+				},
+				"shellformat.flag": {
+					"type": [
+						"string",
+						"null"
+					],
+					"default": null,
+					"description": "shfmt -h  to see detail usage , example: -p -bn -ci"
+				},
+				"shellformat.effectLanguages": {
+					"type": "array",
+					"default": [
+						"shellscript",
+						"dockerfile",
+						"dotenv",
+						"hosts",
+						"jvmoptions",
+						"ignore",
+						"gitignore",
+						"properties",
+						"spring-boot-properties",
+						"azcli"
+					],
+					"description": "the trigger effect  on the language"
+				},
+				"shellformat.useEditorConfig": {
+					"type": "boolean",
+					"default": false,
+					"description": "Use EditorConfig for shfmt configuration"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "webpack --mode production",
+		"compile": "webpack --mode none",
+		"watch": "webpack --mode none --watch",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test-compile": "tsc -p ./",
+		"test": "node ./node_modules/vscode/bin/test",
+		"format": "prettier --write './**/*.{js,jsx,ts,tsx,json,css,scss,md,yml,yaml,html}'",
+		"format-check": "prettier --check './**/*.{js,jsx,ts,tsx,json,css,scss,md,yml,yaml,html}'"
+	},
+	"devDependencies": {
+		"@types/mocha": "8.2.2",
+		"@types/node": "10.17.56",
+		"husky": "6.0.0",
+		"lint-staged": "10.5.4",
+		"prettier": "2.2.1",
+		"mocha": "8.3.2",
+		"typescript": "4.2.4",
+		"ts-loader": "8.1.0",
+		"vscode": "1.1.37",
+		"webpack": "5.31.0",
+		"webpack-cli": "4.6.0"
+	},
+	"dependencies": {
+		"editorconfig": "^0.15.3",
+		"diff": "~5.0.0"
+	},
+	"__metadata": {
+		"id": "5fb19573-2183-4cf2-b53d-0fb869dae7ae",
+		"publisherId": "c5bb2216-aaba-47a1-962e-5561e40c03c5",
+		"publisherDisplayName": "foxundermoon",
+		"installedTimestamp": 1622065089012
+	}
+}

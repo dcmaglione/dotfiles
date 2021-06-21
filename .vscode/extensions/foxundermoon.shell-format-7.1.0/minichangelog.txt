@@ -1,0 +1,6 @@
+## 7.1.0
+
+- bump shfmt to 3.2.4
+- support apple m1 chip #136
+- support editor config
+

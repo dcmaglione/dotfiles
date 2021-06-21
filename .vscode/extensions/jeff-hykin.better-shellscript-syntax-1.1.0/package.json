@@ -1,0 +1,89 @@
+{
+	"name": "better-shellscript-syntax",
+	"displayName": "Better Shell Syntax",
+	"description": "An update to the syntax of Shellscript",
+	"icon": "icons/shell.png",
+	"version": "1.1.0",
+	"scripts": {
+		"build": "ruby scripts/generate.rb",
+		"postbuild": "npm run prep-embedded",
+		"perfall": "ruby scripts/perf_all.rb",
+		"prelint": "npm run build",
+		"lint": "ruby scripts/lint.rb",
+		"pretest": "npm run build",
+		"test": "node test/source/index.js test",
+		"testall": "npm test -- --all",
+		"genall": "npm run generate-specs -- --all",
+		"preversion": "npm test",
+		"version": "npm run build && git add -A syntaxes",
+		"pregenerate-specs": "npm run build",
+		"generate-specs": "node test/source/index.js generate-specs",
+		"gen": "npm run generate-specs -- ",
+		"try": "npm run test -- --show-failure-only",
+		"sort-specs": "node test/source/index.js sort-specs",
+		"prereport": "npm run build",
+		"report": "node test/source/index.js report",
+		"perf": "npm run report -- perf",
+		"cov": "npm run report -- coverage",
+		"publish": "ruby scripts/publish.rb",
+		"prep-embedded": "node scripts/duplicateForEmbedding.js"
+	},
+	"keywords": [
+		"shell",
+		"shellscript",
+		"syntax",
+		"textmate",
+		"highlighting",
+		"coloring",
+		"color"
+	],
+	"engines": {
+		"vscode": "^1.0.0"
+	},
+	"author": {
+		"name": "Jeff Hykin"
+	},
+	"publisher": "jeff-hykin",
+	"contributes": {
+		"grammars": [
+			{
+				"language": "shellscript",
+				"scopeName": "source.shell",
+				"path": "syntaxes/shell.tmLanguage.json"
+			}
+		]
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"repository": {
+		"url": "https://github.com/jeff-hykin/better-shell-syntax",
+		"type": "git"
+	},
+	"devDependencies": {
+		"chalk": "^2.4.2",
+		"convert-svg-to-png": "^0.5.0",
+		"dictionary-en-us": "^2.1.1",
+		"glob": "^7.1.4",
+		"js-yaml": "^3.13.1",
+		"json-source-map": "^0.4.0",
+		"json-stable-stringify": "^1.0.1",
+		"lodash": "^4.17.13",
+		"minimatch": "^3.0.4",
+		"node-gyp": "^4.0.0",
+		"nspell": "^2.1.2",
+		"oniguruma": "^7.2.0",
+		"prettyjson": "^1.2.1",
+		"vscode-textmate": "^4.1.1",
+		"yargs": "^13.2.2"
+	},
+	"dependencies": {
+		"textmate-bailout": "^1.1.0"
+	},
+	"__metadata": {
+		"id": "f27ad139-0ff0-4fea-a7c3-d1af80eed6ae",
+		"publisherId": "b734936b-6cc4-40c1-b17a-c6a7e1f680cd",
+		"publisherDisplayName": "Jeff Hykin",
+		"installedTimestamp": 1624291594457
+	}
+}

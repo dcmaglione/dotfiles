@@ -9,7 +9,7 @@ Dotfiles are primarily used for software configuration. Therefore, they are also
 Overall, the usefulness of dotfiles lies in the fact that anytime you switch systems it can be quickly configured exactly as you were using it before.
 
 ## Visual
-![qtile config](https://github.com/dcmaglione/dotfiles/.screenshots/qtile-config.png?raw=true)
+[[https://github.com/dcmaglione/dotfiles/-/raw/master/.screenshots/qtile-config.png]]
 
 ## Packages
 The required packages and imports will differ by distribution. Each configuration file for a respective distro will contain a README.md with the necessary installations. 

@@ -1,0 +1,29 @@
+### dcmags's  ~/.bashrc ###
+
+### MISC ###
+[[ $- != *i* ]] && return
+
+### PROMPT ###
+PS1='\e[1;37m\u\e[0m@\h \e[1;37m\w\e[0m \n> \$ '
+
+### ALIASES ###
+alias sync="sudo emerge --sync"
+alias update="sudo emerge -avuDN @world"
+alias install="sudo emerge --ask --autounmask --autounmask-write --autounmask-continue"
+alias remove="sudo emerge --deselect"
+alias clean="sudo emerge --depclean && echo "" && sudo eclean-dist -d"
+alias search="emerge -s"
+alias rebuild="sudo emerge --exclude=sys-kernel/gentoo-kernel @module-rebuild && sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias shutdown="sudo shutdown -h now"
+alias poweroff="sudo poweroff"
+alias reboot="sudo reboot"
+alias ls="exa"
+alias l="exa -l"
+alias la="exa -a"
+alias lla="exa -la"
+alias lt="exa --tree"
+alias off="clear && xset dpms force off"
+
+### PATHS ###
+# example
+# export PATH="/opt/bin:$PATH"

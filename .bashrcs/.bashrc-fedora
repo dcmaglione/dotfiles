@@ -1,0 +1,24 @@
+### dcmag's  ~/.bashrc ###
+
+### MISC ###
+[[ $- != *i* ]] && return
+
+### PROMPT ###
+PS1='\e[1;37m\u\e[0m@\h \e[1;37m\w\e[0m \n> \$ '
+
+### ALIASES ###
+alias update="sudo dnf update"
+alias install="sudo dnf install"
+alias search="dnf search"
+alias remove="sudo dnf remove"
+alias clean="sudo dnf autoremove"
+alias ls="exa"
+alias l="exa -l"
+alias la="exa -a"
+alias lla="exa -la"
+alias lt="exa --tree"
+
+### PATHS ###
+# example
+# export PATH="/opt/bin:$PATH"
+

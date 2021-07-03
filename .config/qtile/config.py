@@ -549,6 +549,7 @@ floating_layout = layout.Floating(float_rules=[
     Match(wm_class='Lxappearance'),
     Match(wm_class='Pavucontrol'),
     Match(wm_class='VirtualBox Manager'),
+    Match(wm_class='Virt-manager'),
     Match(wm_class='feh'),
     Match(wm_class='Lxpolkit'),
     Match(wm_class='thunar'),

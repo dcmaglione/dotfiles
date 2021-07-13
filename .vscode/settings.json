@@ -12,6 +12,8 @@
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
     "python.defaultInterpreterPath": "/usr/bin/python",
+    "python.autoComplete.addBrackets": true,
+    "python.formatting.provider": "autopep8",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -25,5 +27,9 @@
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "editor.codeActionsOnSave": null
+    "editor.codeActionsOnSave": null,
+    "prettier.tabWidth": 4,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "python.analysis.completeFunctionParens": true
 }

@@ -31,5 +31,6 @@
     "prettier.tabWidth": 4,
     "prettier.semi": false,
     "prettier.singleQuote": true,
-    "python.analysis.completeFunctionParens": true
+    "python.analysis.completeFunctionParens": true,
+    "tabnine.experimentalAutoImports": true
 }

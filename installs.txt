@@ -1,0 +1,16 @@
+## PACKAGES - FEDORA LINUX ##
+# FEDORA MINIMAL
+Standard, C Dev Tools & Libraries, Dev Tools & Libraries, Editors, RPM Dev Tools, 
+
+# BASE SYSTEM
+akmod-nvidia, xorg-x11-drv-nvidia-cuda, xorg-x11-xinit picom, pulseaudio, pulseaudio-utils, alsa-lib, alsa-utils, 
+alsa-plugins-pulseaudio, pavucontrol, xdg-user-dirs, kitty, playerctl
+
+# WINDOW MANAGER
+qtile, dmenu, dunst, lxappearance, lxsession, lxpolkit, xsetroot, thunar, nitrogen, flameshot, feh, (pip install psutils)
+
+# UTILITIES
+git, firefox, python, exa, lm_sensors
+
+# FONTS
+gnu-free-fonts-common, google-noto-fonts-common, fira-code-fonts, fontsawesome-fonts

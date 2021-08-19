@@ -12,7 +12,7 @@ Overall, the usefulness of dotfiles lies in the fact that anytime you switch sys
 ![qtile config](https://github.com/dcmaglione/dotfiles/blob/master/.screenshots/qtile-config.png)
 
 ## Packages
-The required packages and imports will differ by distribution. Each configuration file for a respective distro will contain a README.md with the necessary installations. 
+The required packages and imports will differ by distribution. Each configuration file for a respective distro will contain a README.md with the necessary installations. The necessary base installs are provided in the installs.txt file.
 
 ## Contributing
 These dotfiles are not open to contributions as I use them on my personal system. However, the files and scripts in this repository are licensed under the MIT License, which is a very permissive license allowing you to use, modify, copy, distribute, sell, give away, etc. the software. In other words, do what you want with it. The only requirement with the MIT License is that the license and copyright notice must be provided with the software.

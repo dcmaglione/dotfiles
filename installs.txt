@@ -3,7 +3,7 @@
 Standard, C Dev Tools & Libraries, Dev Tools & Libraries, Editors, RPM Dev Tools, 
 
 # BASE SYSTEM
-akmod-nvidia, xorg-x11-drv-nvidia-cuda, xorg-x11-xinit picom, pulseaudio, pulseaudio-utils, alsa-lib, alsa-utils, 
+akmod-nvidia, xorg-x11-drv-nvidia-cuda, xorg-x11-xinit, picom, pulseaudio, pulseaudio-utils, alsa-lib, alsa-utils, 
 alsa-plugins-pulseaudio, pavucontrol, xdg-user-dirs, kitty, playerctl
 
 # WINDOW MANAGER
@@ -14,3 +14,20 @@ git, firefox, python, exa, lm_sensors
 
 # FONTS
 gnu-free-fonts-common, google-noto-fonts-common, fira-code-fonts, fontsawesome-fonts
+
+
+## PACKAGES - ARCH LINUX ##
+# PACSTRAP
+base, base-devel, linux, linux-firmware, networkmanager, vi
+
+# BASE SYSTEM
+nvidia, nvidia-settings, xorg, xorg-xinit, picom, pulseaudio, pulseaudio-alsa, pavucontrol, playerctl, kitty, xdg-user-dirs
+
+# WINDOW MANAGER
+qtile, python-pip, dmenu, flameshot, feh, lxappearance, lxsession
+
+# UTILITIES
+git, vim, grub, os-prober, ntfs-3g, efibootmgr, firefox, exa, trizen, thunar, dunst
+
+# FONTS
+gnu-free-fonts, noto-fonts, ttf-fira-code, ttf-font-awesome, ttf-ubuntu-font-family

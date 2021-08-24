@@ -63,7 +63,7 @@ keys = [
         ),
     Key([mod, "shift"], "Return",
         lazy.spawn(
-            "dmenu_run -fn 'FiraCode-Bold-11' -nb '#2e3440' -nf '#f2f2f2' -sb '#7db2eb' -sf '#f2f2f2'"),
+            "dmenu_run -fn 'RobotoMono-Bold-11' -nb '#2e3440' -nf '#f2f2f2' -sb '#7db2eb' -sf '#f2f2f2'"),
         desc='Run dmenu launcher with prompt'
         ),
     Key([mod], "Tab",
@@ -310,7 +310,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 ### WIDGETS ###
 # Default settings
 widget_defaults = dict(
-    font="FiraCode",
+    font="RobotoMono",
     fontsize=16,
     padding=4,
     background=colors[0]
@@ -329,7 +329,7 @@ def init_widgets_list():
             foreground=colors[2]
         ),
         widget.GroupBox(
-            font="FiraCode",
+            font="RobotoMono",
             fontsize=16,
             margin_y=3,
             margin_x=0,

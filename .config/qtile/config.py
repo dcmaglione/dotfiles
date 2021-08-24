@@ -395,12 +395,14 @@ def init_widgets_list():
             fontsize=43
         ),
         widget.TextBox(
-            text=" 🖬",
+            text=" ",
             background=colors[13],
             foreground=colors[0],
             padding=0,
         ),
         widget.Memory(
+            format=" {MemUsed:.0f}{mm}/{MemTotal:.0f}{mm}",
+            update_interval=1.0,
             background=colors[13],
             foreground=colors[0],
             padding=5
@@ -421,6 +423,7 @@ def init_widgets_list():
             foreground=colors[0],
         ),
         widget.ThermalSensor(
+            update_interval=1.0,
             background=colors[15],
             foreground=colors[0],
             threshold=90,
@@ -439,6 +442,7 @@ def init_widgets_list():
         widget.Net(
             interface="enp4s0",
             format='{down}  {up}',
+            update_interval=1.0,
             background=colors[16],
             foreground=colors[10],
             padding=5

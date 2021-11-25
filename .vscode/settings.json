@@ -1,7 +1,7 @@
 {
     "telemetry.enableCrashReporter": false,
-    "telemetry.enableTelemetry": false,
-    "workbench.colorTheme": "One Dark Pro",
+    "telemetry.enableTelemetry": true,
+    "workbench.colorTheme": "One Dark Pro Flat",
     "workbench.iconTheme": "vs-nomo-dark",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -11,7 +11,6 @@
     "editor.fontSize": 17,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontLigatures": true,
-    "python.defaultInterpreterPath": "/usr/bin/python",
     "python.autoComplete.addBrackets": true,
     "python.formatting.provider": "autopep8",
     "files.exclude": {
@@ -32,5 +31,7 @@
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "python.analysis.completeFunctionParens": true,
-    "tabnine.experimentalAutoImports": true
+    "tabnine.experimentalAutoImports": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "editor.wordWrap": "on"
 }

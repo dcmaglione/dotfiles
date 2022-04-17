@@ -39,8 +39,8 @@ from typing import List  # noqa: F401
 
 
 ### VARIABLES ###
-# Sets mod key to ALT and terminal to KITTY
-mod = "mod1"
+# Sets mod key to WIN and terminal to KITTY
+mod = "mod4"
 terminal = "kitty"
 
 ### MISC FUNCTIONS ###
@@ -366,11 +366,10 @@ def init_widgets_list():
 
         # CPU speed and load
         widget.TextBox(
-            text="",
-            background=colors[0],
-            foreground=colors[10],
-            padding=0,
-            fontsize=43
+            text=" ",
+            padding=2,
+            background=colors[10],
+            foreground=colors[0],
         ),
         widget.TextBox(
             text=" ",
@@ -388,11 +387,10 @@ def init_widgets_list():
 
         # Memory load
         widget.TextBox(
-            text="",
-            background=colors[10],
-            foreground=colors[13],
-            padding=0,
-            fontsize=43
+            text=" ",
+            padding=2,
+            background=colors[13],
+            foreground=colors[0],
         ),
         widget.TextBox(
             text=" ",
@@ -410,11 +408,10 @@ def init_widgets_list():
 
         # System temperature
         widget.TextBox(
-            text="",
-            background=colors[13],
-            foreground=colors[15],
-            padding=0,
-            fontsize=43
+            text=" ",
+            padding=2,
+            background=colors[15],
+            foreground=colors[0],
         ),
         widget.TextBox(
             text=" 🌡",
@@ -433,11 +430,10 @@ def init_widgets_list():
 
         # Network speed (up and down)
         widget.TextBox(
-            text="",
-            background=colors[15],
-            foreground=colors[16],
-            padding=0,
-            fontsize=43
+            text=" ",
+            padding=2,
+            background=colors[16],
+            foreground=colors[0],
         ),
         widget.Net(
             interface="enp4s0",
@@ -450,17 +446,16 @@ def init_widgets_list():
 
         # Volume indicator
         widget.TextBox(
-            text="",
-            background=colors[16],
-            foreground=colors[17],
-            padding=0,
-            fontsize=43
+            text=" ",
+            padding=2,
+            background=colors[17],
+            foreground=colors[0],
         ),
         widget.TextBox(
             text="  Vol",
             background=colors[17],
             foreground=colors[10],
-            padding=0
+            padding_left=10
         ),
         widget.Volume(
             background=colors[17],
@@ -470,16 +465,16 @@ def init_widgets_list():
 
         # Date and time
         widget.TextBox(
-            text="",
-            background=colors[17],
-            foreground=colors[19],
-            padding=0,
-            fontsize=43
+            text=" ",
+            padding=2,
+            background=colors[19],
+            foreground=colors[0],
         ),
         widget.Clock(
             background=colors[19],
             foreground=colors[10],
-            format="%A, %B %d  %I:%M %p "
+            padding=10,
+            format="%A, %B %d  %I:%M %p"
         ),
     ]
     return widgets_list

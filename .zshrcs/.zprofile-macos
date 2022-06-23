@@ -1,0 +1,8 @@
+### ~/.zprofile ###
+
+### PATHS ###
+export PATH=${PATH}:/usr/local/mysql/bin
+export PATH="/opt/homebrew/opt/inetutils/libexec/gnubin:$PATH"
+
+### STARTUP ###
+eval "$(/opt/homebrew/bin/brew shellenv)"

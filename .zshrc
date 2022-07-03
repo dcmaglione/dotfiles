@@ -1,38 +1,30 @@
-### EXPORTS ###
-export ZSH="/home/dcmag/.oh-my-zsh"
-export VISUAL=vim
-export EDITOR=vim
+### dcmag's ~/.zshrc ###
 
-### THEME ###
-ZSH_THEME="bureau"
-
-### PLUGINS ###
-plugins=(
-  git
-  urltools
-  bgnotify
-  zsh-autosuggestions
-  zsh-syntax-highlighting
-  dotbare
-)
-
-source $ZSH/oh-my-zsh.sh
-source /usr/share/fzf/key-bindings.zsh
+### PROMPT ###
+PS1='%B%n%b@macOS %B%~%b'$'\n''> $ '
 
 ### ALIASES ###
-alias sync="trizen -Syy"
-alias update="trizen -Syyu"
-alias install="trizen -S"
-alias remove="trizen -Rscn"
-alias clean="trizen -Scc && sudo pacman -Qtdq | pacman -Rns -"
-alias search="trizen -s"
-alias ls="lsd"
-alias l="lsd -l"
-alias la="lsd -a"
-alias lla="lsd -la"
-alias lt="lsd --tree"
-alias off="clear && xset dpms force off"
+alias update='brew update'
+alias upgrade='brew upgrade'
+alias install='brew install'
+alias remove='brew uninstall'
+alias clean='brew cleanup'
+alias search='brew search'
+alias ls='ls --color=auto'
+alias ls='exa'
+alias l='exa -l'
+alias la='exa -a'
+alias lla='exa -la'
+alias lt='exa --tree -L 2'
+alias sql='mysql -u root -p'
+alias venv='source venv/bin/activate'
 
-### PATHS ###
-# example
-# path+=/opt/bin/
+### ENV VARIABLES ###
+
+
+### PLUGINS ###
+
+
+### ZSH OPTIONS ###
+CASE_SENSITIVE="true"
+

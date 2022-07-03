@@ -1,15 +1,14 @@
 {
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": true,
-    "workbench.colorTheme": "One Dark Pro Flat",
-    "workbench.iconTheme": "vs-nomo-dark",
+    "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.editorAssociations": {
         "*.ipynb": "jupyter.notebook.ipynb"
     },
-    "editor.fontSize": 17,
-    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Jetbrains Mono'",
     "editor.fontLigatures": true,
     "python.autoComplete.addBrackets": true,
     "python.formatting.provider": "autopep8",
@@ -21,10 +20,12 @@
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
     },
     "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
     },
     "editor.codeActionsOnSave": null,
     "prettier.tabWidth": 4,
@@ -33,5 +34,44 @@
     "python.analysis.completeFunctionParens": true,
     "tabnine.experimentalAutoImports": true,
     "latex-workshop.view.pdf.viewer": "tab",
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+    "editor.inlineSuggest.enabled": true,
+    "[ocaml]": {
+
+        "editor.defaultFormatter": "badochov.ocaml-formatter",
+        "editor.tabSize": 2
+    },
+    "editor.linkedEditing": true,
+    "window.title": "${activeEditorMedium}${separator}${rootName}$",
+    "debug.toolBarLocation": "docked",
+    "editor.cursorBlinking": "smooth",
+    "workbench.sideBar.location": "right",
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.tabSize": 4
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": true,
+        "markdown": false,
+        "ocaml": false,
+        "sql": false
+    },
+    "terminal.external.linuxExec": "kitty",
+    "terminal.explorerKind": "external",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools",
+        "editor.tabSize": 2
+    },
+    "[sql]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.tabSize": 2
+    },
+    "bracketPairColorizer.depreciation-notice": false,
+    "ocaml-formatter.profile": "janestreet",
+    "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "editor.guides.bracketPairs": true,
 }

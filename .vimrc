@@ -2,8 +2,13 @@
 " -----------------------------------------------------------------------------
 "  PLUGIN SETTINGS
 " -----------------------------------------------------------------------------
+"  fixes background issue w/ kitty
+if &term == 'xterm-kitty'
+  let &t_ut=''
+endif
+
 " set colorscheme for lightline
-let g:lightline = { 'colorscheme': 'monokai_pro' }
+let g:lightline = { 'colorscheme': 'onedark' }
 
 " disable language packs by adding them here
 " let g:polygot_disabled = ['markdown']
@@ -36,6 +41,10 @@ Plug 'itchyny/lightline.vim'
 Plug 'gko/vim-coloresque'
 
 Plug 'phanviet/vim-monokai-pro'
+
+Plug 'fladson/vim-kitty'
+
+Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
@@ -70,7 +79,7 @@ filetype plugin on
 filetype indent on
 
 " set the colorscheme
-colorscheme monokai_pro
+colorscheme onedark
 
 " enable color highlighting based on terminal
 set termguicolors

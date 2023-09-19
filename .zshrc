@@ -1,48 +1,78 @@
-### dcmag's ~/.zshrc ###
+#!/bin/sh
 
-### GIT BRANCH ###
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git svn
-zstyle ':vcs_info:git*' formats ": %s(%b) %m%u%c "
+# DCMAG'S ~/.ZSHRC
+# ------------------------------------------
+# SOURCE
+# ------------------------------------------
+# Load Zap Config
+[ -f "$HOME/.local/share/zap/zap.zsh" ] && source "$HOME/.local/share/zap/zap.zsh"
 
-precmd() {
-    vcs_info
-}
+# Load and Initialize Completion System
+autoload -Uz compinit
+compinit
 
-setopt prompt_subst
+# ------------------------------------------
+# ALIASES, EXPORTS, & PROMPT
+# ------------------------------------------
+# Load Alises and Exports
+plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/exports.zsh"
 
+# A modified prompt based on chris@machine 
+plug "$HOME/.config/zsh/prompt.zsh-theme"
 
-### PROMPT ###
-# PS1='%B%n%b@macOS %B%~%b'$'\n''> $ '
-PROMPT='%B%F{red}%n%f%b@macOS %B%{%F{yellow}%}%~ %{%f%}%F{green}${vcs_info_msg_0_}%f%b'$'\n''> $ '
+# ------------------------------------------
+# ZAP PLUGIN MANAGER
+# ------------------------------------------
+# Fish-like autosuggestions for zsh
+plug "zsh-users/zsh-autosuggestions"
 
+# A completions plugin with some sensible starters
+plug "zap-zsh/completions"
 
-### ALIASES ###
-alias update='brew upgrade'
-alias install='brew install'
-alias remove='brew uninstall'
-alias clean='brew cleanup'
-alias search='brew search'
-alias ls='exa'
-alias l='exa -l'
-alias la='exa -la'
-alias lt='exa --tree -L 2'
-alias sql='mysql -u root -p'
-alias venv='source venv/bin/activate'
-alias jn='jupyter notebook'
-alias python='python3'
-alias pip='pip3'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias gpl='git pull'
-alias gs='git status'
-alias gcl='git clone'
+# Auto-close and delete matching delimiters in zsh
+plug "hlissner/zsh-autopair"
 
-### STARTUP ###
-~/Documents/GitRepos/shutthefetchup/shutthefetchup
+# Supercharge your zsh experience
+plug "zap-zsh/supercharge"
 
+# Fish shell like syntax highlighting for Zsh
+plug "zsh-users/zsh-syntax-highlighting"
 
-### ZSH OPTIONS ###
-CASE_SENSITIVE="true"
+# ZSH plugin that reminds you to use existing aliases for commands you just typed
+plug "MichaelAquilina/zsh-you-should-use"
+
+# A helper plugin for users with fzf installed
+plug "zap-zsh/fzf"
+
+# Override ls and tree commands to use exa instead
+plug "zap-zsh/exa"
+
+# Vim plugin for zsh (alternative to standard Zsh vi mode)
+plug "zap-zsh/vim"
+
+# A zsh plugin for the Homebrew package manager
+plug "wintermi/zsh-brew"
+
+# A zsh plugin for the Google Cloud Command Line Interface (gcloud CLI) completions
+plug "wintermi/zsh-gcloud"
+
+# ------------------------------------------
+# KEYBINDS
+# ------------------------------------------
+bindkey '^ ' autosuggest-accept
+
+# ------------------------------------------
+# MISC
+# ------------------------------------------
+# Use BAT if Installed
+if command -v bat &> /dev/null; then
+	alias cat="bat -pp --theme \"ansi\"" 
+	alias catt="bat --theme \"ansi\"" 
+fi
+
+# Use FZF if Installed
+if command -v fzf &> /dev/null; then
+	[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+fi
 

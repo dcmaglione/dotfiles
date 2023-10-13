@@ -1,0 +1,74 @@
+# DCMAG'S ~/.ZSHRC
+
+# ------------------------------------------
+# GIT BRANCH
+# ------------------------------------------
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+zstyle ':vcs_info:git*' formats ": %s(%b) %m%u%c "
+
+precmd() {
+    vcs_info
+}
+
+setopt prompt_subst
+
+# ------------------------------------------
+# PROMPT
+# ------------------------------------------
+# PS1='%B%n%b@macOS %B%~%b'$'\n''> $ '
+PROMPT='%B%F{red}%n%f%b@macOS %B%{%F{yellow}%}%~ %{%f%}%F{green}${vcs_info_msg_0_}%f%b'$'\n''> $ '
+
+# ------------------------------------------
+# ALIASES
+# ------------------------------------------
+alias upgrade='brew upgrade'
+alias update='brew update'
+alias install='brew install'
+alias uninstall='brew uninstall'
+alias cleanup='brew cleanup'
+alias search='brew search'
+alias autoremove='brew autoremove'
+alias ls='exa'
+alias l='exa -l'
+alias ll='exa -lh'
+alias la='exa -la'
+alias lt='exa --tree -L 2'
+alias lsa='exa -lah'
+alias sql='mysql -u root -p'
+alias venv='source venv/bin/activate'
+alias jn='jupyter notebook'
+alias python='python3'
+alias pip='pip3'
+alias add='git add'
+alias commit='git commit'
+alias push='git push'
+alias pull='git pull'
+alias status='git status'
+alias clone='git clone'
+alias checkout='git checkout'
+alias branch='git branch'
+alias stash='git stash'
+alias cat='bat'
+
+# MISC ALIASES
+alias java-8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_361`'
+
+# ------------------------------------------
+# ZSH OPTIONS
+# ------------------------------------------
+autoload -U compinit; compinit
+CASE_SENSITIVE="true"
+
+# ------------------------------------------
+# PLUGINS
+# ------------------------------------------
+# command-line fuzzy finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# zsh-autosuggestions
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# bat: a cat clone with wings
+export BAT_THEME="ansi"
+

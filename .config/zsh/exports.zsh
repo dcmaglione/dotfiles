@@ -17,10 +17,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(zoxide init zsh)"
 
 # ------------------------------------------
-# GOOGLE CLOUD CLI
+# PYENV
 # ------------------------------------------
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/dcmag/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/dcmag/google-cloud-sdk/path.zsh.inc'; fi
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/dcmag/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/dcmag/google-cloud-sdk/completion.zsh.inc'; fi

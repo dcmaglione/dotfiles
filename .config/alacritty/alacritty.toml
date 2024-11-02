@@ -1,0 +1,28 @@
+# DCMAG'S ALACRITTY.TOML
+
+# GENERAL
+import = ["~/.config/alacritty/dracula.toml"]
+
+[shell]
+program = "/bin/zsh"
+args = ["-l"]
+
+# WINDOW
+[window]
+padding = { x = 8, y = 30 }
+dynamic_padding = true
+decorations = "Transparent"
+dynamic_title = true
+
+# FONT
+[font]
+normal = { family = "FiraCode Nerd Font", style = "Regular" }
+size = 15.0
+
+# SELECTION
+[selection]
+save_to_clipboard = true
+
+# CURSOR
+[cursor]
+style = { shape = "Block", blinking = "On" }

@@ -2,13 +2,8 @@
 " -----------------------------------------------------------------------------
 "  PLUGIN SETTINGS
 " -----------------------------------------------------------------------------
-"  fixes background issue w/ kitty
-if &term == 'xterm-kitty'
-  let &t_ut=''
-endif
-
 " set colorscheme for lightline
-let g:lightline = { 'colorscheme': 'onedark' }
+let g:lightline = { 'colorscheme': 'dracula' }
 
 " disable language packs by adding them here
 " let g:polygot_disabled = ['markdown']
@@ -32,19 +27,15 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'sheerun/vim-polyglot'
 
-Plug 'arcticicestudio/nord-vim'
-
-Plug 'morhetz/gruvbox'
-
 Plug 'itchyny/lightline.vim'
 
 Plug 'gko/vim-coloresque'
 
-Plug 'phanviet/vim-monokai-pro'
+Plug 'dracula/vim'
 
-Plug 'fladson/vim-kitty'
+Plug 'ekalinin/Dockerfile.vim'
 
-Plug 'joshdick/onedark.vim'
+Plug 'cdelledonne/vim-cmake'
 
 call plug#end()
 
@@ -79,7 +70,7 @@ filetype plugin on
 filetype indent on
 
 " set the colorscheme
-colorscheme onedark
+colorscheme dracula
 
 " enable color highlighting based on terminal
 set termguicolors
@@ -108,3 +99,17 @@ set mouse=a
 " set insert cursor style
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+" enable protobuf syntax
+augroup filetype
+  au! BufRead,BufNewFile *.proto setfiletype proto
+augroup end
+
+" reset cursor shape (alacritty)
+augroup reset_cursor_shape
+  au!
+  "autocmd VimEnter * startinsert | stopinsert
+  autocmd VimEnter * normal! :startinsert :stopinsert
+  "autocmd VimEnter * :normal :startinsert :stopinsert
+  autocmd VimEnter * redraw!
+augroup end

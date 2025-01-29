@@ -1,4 +1,4 @@
-# DCMAG'S ALACRITTY.TOML
+# DCMAG's ALACRITTY.TOML
 
 # GENERAL
 import = ["~/.config/alacritty/dracula.toml"]
@@ -16,7 +16,7 @@ dynamic_title = true
 
 # FONT
 [font]
-normal = { family = "FiraCode Nerd Font", style = "Regular" }
+normal = { family = "FiraCode Nerd Font", style= "Regular" }
 size = 15.0
 
 # SELECTION
@@ -26,3 +26,4 @@ save_to_clipboard = true
 # CURSOR
 [cursor]
 style = { shape = "Block", blinking = "On" }
+

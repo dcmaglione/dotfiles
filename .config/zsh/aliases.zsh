@@ -13,6 +13,22 @@ alias search='brew search'
 alias autoremove='brew autoremove'
 
 # ------------------------------------------
+# CLI UTILS
+# ------------------------------------------
+# Eza
+alias ls='eza'
+alias ll='eza -l'
+alias la='eza -a'
+alias lla='eza -la'
+
+# Bat
+alias cat='bat -pp --theme "ansi"'
+alias catt='bat --theme "ansi"'
+
+# Ripgrep
+alias grep='rg'
+
+# ------------------------------------------
 # GIT
 # ------------------------------------------
 alias add='git add'
@@ -24,16 +40,14 @@ alias clone='git clone'
 alias checkout='git checkout'
 alias branch='git branch'
 alias stash='git stash'
+alias fetch='git fetch'
 
 # ------------------------------------------
 # DEVELOPMENT
 # ------------------------------------------
-alias sql='mysql -u root -p'
 alias venv='source venv/bin/activate'
-alias jn='jupyter notebook'
 alias python='python3'
 alias pip='pip3'
-alias java-8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_361`'
 
 # ------------------------------------------
 # GREP
